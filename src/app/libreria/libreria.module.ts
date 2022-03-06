@@ -10,13 +10,15 @@ import { AltaLibroComponent } from './alta-libro/alta-libro.component';
 import { LibreriaService } from './libreria.service';
 import { ListadoLibrosComponent } from './listado-libros/listado-libros.component';
 import { BajaLibroComponent } from './baja-libro/baja-libro.component';
+import { ModificarLibroComponent } from './modificar-libro/modificar-libro.component';
 
 
 @NgModule({
   declarations: [
     AltaLibroComponent,
     ListadoLibrosComponent,
-    BajaLibroComponent
+    BajaLibroComponent,
+    ModificarLibroComponent
   ],
   imports: [
     CommonModule,
@@ -26,9 +28,10 @@ import { BajaLibroComponent } from './baja-libro/baja-libro.component';
     LibreriaService
   ],
   exports: [ //Exportamos para llevarlo a la raiz
-    AltaLibroComponent,
     ListadoLibrosComponent,
-    BajaLibroComponent
+    AltaLibroComponent,
+    BajaLibroComponent,
+    ModificarLibroComponent
   ]
 })
 export class LibreriaModule { }

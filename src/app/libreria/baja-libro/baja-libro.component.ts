@@ -14,8 +14,8 @@ export class BajaLibroComponent implements OnInit {
   libro: Libro;
   libros: Libro[];
 
-  constructor(private libreriaService: LibreriaService) {
-    this.libro = this.libreriaService.seleccionarLibro();
+  constructor(private libreriaService: LibreriaService) { // Servicio por parametro
+    this.libro = this.libreriaService.selectLibro();
     this.libros = this.libreriaService.getLibros();
   }
 

@@ -1,0 +1,25 @@
+<div id="modify">
+  <h2>Modificar Libro</h2>
+  <p>
+    <span>ID:</span>
+    <select [(ngModel)]="libro.id">
+      <option *ngFor="let opcion of libros" value="{{opcion.id}}">{{opcion.id}}</option>
+    </select>  </p>
+  <p>
+    <span>Titulo:</span>
+    <input type="text" [(ngModel)]="libro.titulo">
+  </p>
+  <p>
+    <span>Autor:</span>
+    <input type="text" [(ngModel)]="libro.autor">
+  </p>
+  <p>
+    <span>Categoria:</span>
+    <select [(ngModel)]="libro.categoria">
+      <option *ngFor="let opcion of categorias" value="{{opcion.id}}">{{opcion.nombre}}</option>
+    </select>
+  </p>
+  <p>
+    <button (click)="this.modificarLibro()">Modificar</button>
+  </p>
+</div>
