@@ -9,12 +9,14 @@ import { AltaLibroComponent } from './alta-libro/alta-libro.component';
 // Services
 import { LibreriaService } from './libreria.service';
 import { ListadoLibrosComponent } from './listado-libros/listado-libros.component';
+import { BajaLibroComponent } from './baja-libro/baja-libro.component';
 
 
 @NgModule({
   declarations: [
     AltaLibroComponent,
-    ListadoLibrosComponent
+    ListadoLibrosComponent,
+    BajaLibroComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +27,8 @@ import { ListadoLibrosComponent } from './listado-libros/listado-libros.componen
   ],
   exports: [ //Exportamos para llevarlo a la raiz
     AltaLibroComponent,
-    ListadoLibrosComponent
+    ListadoLibrosComponent,
+    BajaLibroComponent
   ]
 })
 export class LibreriaModule { }

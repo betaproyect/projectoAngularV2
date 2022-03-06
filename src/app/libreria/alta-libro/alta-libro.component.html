@@ -1,22 +1,24 @@
-<h2>Alta cliente</h2>
-<p>
-  <span>ID: </span>
-  <span><b>{{libro.id}}</b></span>
-</p>
-<p>
-  <span>Titulo:</span>
-  <input type="text" [(ngModel)]="libro.titulo">
-</p>
-<p>
-  <span>Autor:</span>
-  <input type="text" [(ngModel)]="libro.autor">
-</p>
-<p>
-  <span>Categoria:</span>
-  <select [(ngModel)]="libro.categoria">
-    <option *ngFor="let opcion of categorias" value="{{opcion.id}}">{{opcion.nombre}}</option>
-  </select>
-</p>
-<p>
-  <button (click)="this.nuevoLibro()">Guardar</button>
-</p>
+<div id="insert">
+  <h2>Alta Libro</h2>
+  <p>
+    <span>ID: </span>
+    <span><b>{{libro.id}}</b></span>
+  </p>
+  <p>
+    <span>Titulo:</span>
+    <input type="text" [(ngModel)]="libro.titulo">
+  </p>
+  <p>
+    <span>Autor:</span>
+    <input type="text" [(ngModel)]="libro.autor">
+  </p>
+  <p>
+    <span>Categoria:</span>
+    <select [(ngModel)]="libro.categoria">
+      <option *ngFor="let opcion of categorias" value="{{opcion.id}}">{{opcion.nombre}}</option>
+    </select>
+  </p>
+  <p>
+    <button (click)="this.nuevoLibro()">Guardar</button>
+  </p>
+</div>

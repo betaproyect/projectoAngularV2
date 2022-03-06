@@ -182,12 +182,31 @@ export class LibreriaService {
     this.libros.push(libro);
   }
 
-  nuevoLibro(): Libro {
+  addLibro(): Libro {
     return {
       id: (this.libros.length) + 1,
       titulo: "",
       autor: "",
       categoria: 0
     }
+  }
+
+  seleccionarLibro(): Libro {
+    return {
+      id: 0,
+      titulo: "",
+      autor: "",
+      categoria: 0
+    };
+
+  }
+
+  deleteLibro(id: number) {
+    id = id - 1;
+    this.libros.splice(id, 1);
+  }
+
+  modificarlibro() {
+
   }
 }

@@ -15,7 +15,7 @@ export class AltaLibroComponent implements OnInit {
   categorias: Categoria[];
 
   constructor(private libreriaService: LibreriaService) { // Servicio por parametro
-    this.libro = this.libreriaService.nuevoLibro();
+    this.libro = this.libreriaService.addLibro();
     this.categorias = this.libreriaService.getCategorias();
   }
 
@@ -24,7 +24,6 @@ export class AltaLibroComponent implements OnInit {
 
   nuevoLibro(): void {
     this.libreriaService.agregarLibro(this.libro);
-    this.libro = this.libreriaService.nuevoLibro();
+    this.libro = this.libreriaService.addLibro();
   }
-
 }
