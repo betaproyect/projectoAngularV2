@@ -1,0 +1,19 @@
+<h3>Listado de Libros</h3>
+<div *ngIf="! libros.length">
+  NO hay Libros en la Libreria
+</div>
+
+<article>
+  <section id="enunciado">
+    <span>ID</span>
+    <span>TITULO</span>
+    <span>AUTOR</span>
+    <span>CATEGORIA</span>
+  </section>
+  <section *ngFor="let libro of libros">
+    <span>{{libro.id}}</span>
+    <span>{{libro.titulo}}</span>
+    <span>{{libro.autor}}</span>
+    <span>{{libro.categoria}}</span>
+  </section>
+</article>
