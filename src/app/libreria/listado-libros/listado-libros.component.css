@@ -1,5 +1,9 @@
 article {
+  position: absolute;
   background-color: azure;
+  top: 600px;
+  width: 90%;
+  margin: 0 90px;
 }
 
 section {

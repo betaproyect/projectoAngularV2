@@ -1,12 +1,14 @@
-<div id="delete">
-  <h2>Eliminar Libro</h2>
-  <p>
-    <span>ID:</span>
-    <select [(ngModel)]="libro.id">
-      <option *ngFor="let opcion of libros" value="{{opcion.id}}">{{opcion.id}}</option>
-    </select>
-  </p>
-  <p>
-    <button (click)="this.eliminarLibro()">Eliminar</button>
-  </p>
+<div class="form">
+  <div class="login-form">
+    <h2>Eliminar Libro</h2>
+    <p>
+      <span>ID:</span>
+      <select [(ngModel)]="libro.id">
+        <option *ngFor="let opcion of libros" value="{{opcion.id}}">{{opcion.id}}</option>
+      </select>
+    </p>
+    <p>
+      <button (click)="this.eliminarLibro()">Eliminar</button>
+    </p>
+  </div>
 </div>

@@ -1,18 +1,17 @@
-<div id="formularios">
-  <div id="login" *ngIf="!us">
-    <h2>LOGIN</h2>
-    <form #f="ngForm" (ngSubmit)="submit(f)">
-      <label>User: </label>
-      <input type="text" name="usuario" ngModel required #first="ngModel" placeholder="Usuario">
+<div class="form" *ngIf="!us">
+  <h2>LOGIN</h2>
+  <form class="login-form" #f="ngForm" (ngSubmit)="submit(f)">
+    <label>User: </label>
+    <input type="text" name="usuario" ngModel required #first="ngModel" placeholder="Usuario">
 
-      <label>Password: </label>
-      <input type="password" name="password" ngModel>
+    <label>Password: </label>
+    <input type="password" name="password" ngModel>
 
-      <button type="submit">Iniciar sesion</button>
-    </form>
-  </div>
-  <app-alta-libro *ngIf="admin"></app-alta-libro><!-- ngIf == admin -->
-  <app-baja-libro *ngIf="admin"></app-baja-libro><!-- ngIf == admin -->
-  <app-modificar-libro *ngIf="admin"></app-modificar-libro><!-- ngIf == admin -->
+    <button type="submit">Iniciar sesion</button>
+  </form>
 </div>
-<app-listado-libros *ngIf="us || admin"></app-listado-libros><!-- ngIf == true -->
+<app-alta-libro *ngIf="admin"></app-alta-libro><!-- ngIf == admin -->
+<app-baja-libro *ngIf="admin"></app-baja-libro><!-- ngIf == admin -->
+<app-modificar-libro *ngIf="admin"></app-modificar-libro><!-- ngIf == admin -->
+
+<app-listado-libros *ngIf="us || admin"></app-listado-libros><!-- ngIf == us -->
