@@ -1,21 +1,30 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 
-// Componentes
+// Components
 import { AppComponent } from './app.component';
 
-// Modulos
+// Modules
 import { LibreriaModule } from './libreria/libreria.module';
+
+// Services
+import { LoginService } from './login.service';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    LibreriaModule //Modulo entero
+    LibreriaModule, //Modulo entero
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    LoginService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,10 +1,3 @@
-// Interfaz de Usuarios
-export interface Usuario {
-  id: number;
-  usuario: string;
-  password: string;
-}
-
 // Interfaces de Libro
 export interface Libro {
   id: number;

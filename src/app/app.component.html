@@ -1,7 +1,18 @@
 <div id="formularios">
-  <app-login></app-login>
-  <app-alta-libro></app-alta-libro><!-- ngIf == admin -->
-  <app-baja-libro></app-baja-libro><!-- ngIf == admin -->
-  <app-modificar-libro></app-modificar-libro><!-- ngIf == admin -->
+  <div id="login" *ngIf="!us">
+    <h2>LOGIN</h2>
+    <form #f="ngForm" (ngSubmit)="submit(f)">
+      <label>User: </label>
+      <input type="text" name="usuario" ngModel required #first="ngModel" placeholder="Usuario">
+
+      <label>Password: </label>
+      <input type="password" name="password" ngModel>
+
+      <button type="submit">Iniciar sesion</button>
+    </form>
+  </div>
+  <app-alta-libro *ngIf="admin"></app-alta-libro><!-- ngIf == admin -->
+  <app-baja-libro *ngIf="admin"></app-baja-libro><!-- ngIf == admin -->
+  <app-modificar-libro *ngIf="admin"></app-modificar-libro><!-- ngIf == admin -->
 </div>
-<app-listado-libros></app-listado-libros><!-- ngIf == true -->
+<app-listado-libros *ngIf="us || admin"></app-listado-libros><!-- ngIf == true -->

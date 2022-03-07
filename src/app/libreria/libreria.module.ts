@@ -9,7 +9,6 @@ import { AltaLibroComponent } from './alta-libro/alta-libro.component';
 import { ListadoLibrosComponent } from './listado-libros/listado-libros.component';
 import { BajaLibroComponent } from './baja-libro/baja-libro.component';
 import { ModificarLibroComponent } from './modificar-libro/modificar-libro.component';
-import { LoginComponent } from './login/login.component';
 
 // Services
 import { LibreriaService } from './libreria.service';
@@ -20,7 +19,6 @@ import { LibreriaService } from './libreria.service';
     ListadoLibrosComponent,
     BajaLibroComponent,
     ModificarLibroComponent,
-    LoginComponent
   ],
   imports: [
     CommonModule,
@@ -35,7 +33,6 @@ import { LibreriaService } from './libreria.service';
     AltaLibroComponent,
     BajaLibroComponent,
     ModificarLibroComponent,
-    LoginComponent
   ]
 })
 export class LibreriaModule { }

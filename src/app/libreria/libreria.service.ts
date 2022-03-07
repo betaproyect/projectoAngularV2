@@ -1,29 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Usuario, Libro, Categoria } from './libreria.model'; //Interfaces importadas
+import { Libro, Categoria } from './libreria.model'; //Interfaces importadas
 
 @Injectable({
   providedIn: 'root'
 })
 export class LibreriaService {
   //Atributos
-  private usuarios: Usuario[];
   private libros: Libro[];
   private categrias: Categoria[];
 
   //Constructor directo
   constructor() {
-    this.usuarios = [
-      {
-        id: 1,
-        usuario: "admin",
-        password: "admin"
-      },
-      {
-        id: 2,
-        usuario: "usuario",
-        password: "usuario"
-      }
-    ];
     this.libros = [
       {
         id: 1,
@@ -164,10 +151,6 @@ export class LibreriaService {
         nombre: "Drama"
       }
     ]
-  }
-
-  getUsuarios() {
-    return this.usuarios;
   }
 
   getLibros() {
