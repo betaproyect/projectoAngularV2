@@ -1,0 +1,10 @@
+<h2>LOGIN</h2>
+<form #f="ngForm" (ngSubmit)="submit(f)">
+  <label>User: </label>
+  <input type="text" name="usuario" ngModel required #first="ngModel" placeholder="Usuario" >
+
+  <label>Password: </label>
+  <input type="password" name="password" ngModel>
+
+  <button type="submit">Iniciar sesion</button>
+</form>

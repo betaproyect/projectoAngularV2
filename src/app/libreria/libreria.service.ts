@@ -178,11 +178,13 @@ export class LibreriaService {
     return this.categrias;
   }
 
-  agregarLibro(libro: Libro): void { //Solo componente AltaLibro
+  //Solo componente AltaLibro
+  agregarLibro(libro: Libro): void {
     this.libros.push(libro);
   }
 
-  addLibro(): Libro { //Solo para componente de AltaLibro
+  //Solo para componente de AltaLibro
+  addLibro(): Libro {
     return {
       id: (this.libros.length) + 1,
       titulo: "",
@@ -191,7 +193,8 @@ export class LibreriaService {
     }
   }
 
-  selectLibro(): Libro { //Componentes BajaLibro y ModificarLibro
+  //Componentes BajaLibro y ModificarLibro
+  selectLibro(): Libro {
     return {
       id: 0,
       titulo: "",
@@ -201,12 +204,14 @@ export class LibreriaService {
 
   }
 
-  deleteLibro(id: number): void { //Componente BajaLibro
+  //Componente BajaLibro
+  deleteLibro(id: number): void {
     id = id - 1;
     this.libros.splice(id, 1);
   }
 
-  modifylibro(nuevo: Libro): void { //Componente ModificarLibro
+  //Componente ModificarLibro
+  modifylibro(nuevo: Libro): void {
     for (let libro of this.libros) {
       if (libro.id == nuevo.id) {
         libro.titulo = nuevo.titulo;

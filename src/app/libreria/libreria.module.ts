@@ -1,28 +1,31 @@
 // General
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
+
 
 // Components
 import { AltaLibroComponent } from './alta-libro/alta-libro.component';
-
-// Services
-import { LibreriaService } from './libreria.service';
 import { ListadoLibrosComponent } from './listado-libros/listado-libros.component';
 import { BajaLibroComponent } from './baja-libro/baja-libro.component';
 import { ModificarLibroComponent } from './modificar-libro/modificar-libro.component';
+import { LoginComponent } from './login/login.component';
 
+// Services
+import { LibreriaService } from './libreria.service';
 
 @NgModule({
   declarations: [
     AltaLibroComponent,
     ListadoLibrosComponent,
     BajaLibroComponent,
-    ModificarLibroComponent
+    ModificarLibroComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     LibreriaService
@@ -31,7 +34,8 @@ import { ModificarLibroComponent } from './modificar-libro/modificar-libro.compo
     ListadoLibrosComponent,
     AltaLibroComponent,
     BajaLibroComponent,
-    ModificarLibroComponent
+    ModificarLibroComponent,
+    LoginComponent
   ]
 })
 export class LibreriaModule { }
